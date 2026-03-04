@@ -11,7 +11,7 @@
     "lint:fix": "eslint . --ext js,jsx,ts,tsx --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "prepare": "husky"
+    "prepare": "node -e \"process.env.CI || require('husky').install()\""
   },
   "dependencies": {
     "clsx": "^2.1.1",

@@ -16,9 +16,6 @@ export const Header = () => {
           <div className={s.left}>
             <Logo className={s.logo} />
             <AltShift className={s.title} />
-            <button className={s.iconButtonAlt} onClick={() => navigate('/')}>
-              <Home />
-            </button>
           </div>
           <div className={s.right}>
             <CountMessages type={'header'} />

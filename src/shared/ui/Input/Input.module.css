@@ -33,13 +33,10 @@
 }
 
 .sizeSmall {
-  /*width: 100%;*/
-  /*max-width: 264px;*/
-  /*height: 40px;*/
+  height: 40px;
 }
 
 .sizeMedium {
-  /*width: 544px;*/
   height: 40px;
 }
 

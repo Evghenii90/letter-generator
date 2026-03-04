@@ -48,7 +48,6 @@
     height: auto;
 }
 
-/* Мобильная адаптация */
 @media (max-width: 1024px) {
     .letter {
         width: 100%;

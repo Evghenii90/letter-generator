@@ -15,8 +15,3 @@
 .copy svg {
   cursor: pointer;
 }
-@media (max-width: 768px) {
-  .copy {
-
-  }
-}

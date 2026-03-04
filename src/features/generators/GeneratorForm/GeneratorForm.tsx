@@ -74,16 +74,11 @@ export const GeneratorForm = ({
       <Textarea value={formData.details} onChange={onTextareaChange} />
 
       {canGenerateMore ? (
-        <Button type="submit" variant="generate" disabled={!isFormValid || loading} fullWidth>
+        <Button type="submit" variant="generate" disabled={!isFormValid && !loading} fullWidth>
           {loading ? <Loader /> : 'Generate New'}
         </Button>
       ) : (
-        <Button
-          type="submit"
-          variant={loading ? 'generate' : 'generate-try-again'}
-          disabled={loading}
-          fullWidth
-        >
+        <Button type="submit" variant={loading ? 'generate' : 'generate-try-again'} fullWidth>
           {loading ? (
             <Loader />
           ) : (

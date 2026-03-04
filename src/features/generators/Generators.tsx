@@ -1,7 +1,7 @@
 import { type ChangeEvent, type SyntheticEvent, useEffect, useRef, useState } from 'react'
 
 import { useCopyToClipboard } from '../../shared/lib/hooks/useCopyMessage'
-import { generateCoverLetter } from '../../shared/lib/utils/generateCoverLetter'
+// import { generateCoverLetter } from '../../shared/lib/utils/generateCoverLetter'
 import { Banner } from '../../shared/ui/Banner/Banner'
 import { Container } from '../../shared/ui/Container/Container'
 import { useStore } from '../../store/useStore'
@@ -80,12 +80,36 @@ export const Generators = () => {
     if (loading) return
 
     setLoading(true)
-    const generatedTextMessage = generateCoverLetter(formData)
-    setGeneratedText(generatedTextMessage)
+
+    const response = await fetch('http://localhost:3001/api/generate', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+
+    if (!response.ok) {
+      setGeneratedText('Failed to generate letter. Try again.')
+      setLoading(false)
+      return
+    }
+
+    const data = await response.json()
+
+    setGeneratedText(data.text)
+
     dispatch({
       type: 'CREATE_MESSAGE',
-      payload: { id: crypto.randomUUID(), text: generatedTextMessage },
+      payload: { id: crypto.randomUUID(), text: data.text },
     })
+
+    // const generatedTextMessage = generateCoverLetter(formData)
+    // setGeneratedText(generatedTextMessage)
+    // dispatch({
+    //   type: 'CREATE_MESSAGE',
+    //   payload: { id: crypto.randomUUID(), text: generatedTextMessage },
+    // })
     setTitle('New Applications')
     if (resetTimerRef.current) {
       clearTimeout(resetTimerRef.current)

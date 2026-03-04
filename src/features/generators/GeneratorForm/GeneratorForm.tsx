@@ -13,7 +13,13 @@ import s from './GeneratorForm.module.css'
 type GeneratorFormProps = {
   title: string
   formData: FormState
+  errors: {
+    jobTitle: string
+    company: string
+    skills: string
+  }
   onInputChange: (e: ChangeEvent<HTMLInputElement>) => void
+  onInputBlur: (name: 'jobTitle' | 'company' | 'skills') => void
   onTextareaChange: (value: string) => void
   onSubmit: (e: SyntheticEvent<HTMLFormElement>) => void
   canGenerateMore: boolean
@@ -24,7 +30,9 @@ type GeneratorFormProps = {
 export const GeneratorForm = ({
   title,
   formData,
+  errors,
   onInputChange,
+  onInputBlur,
   onTextareaChange,
   onSubmit,
   canGenerateMore,
@@ -50,8 +58,12 @@ export const GeneratorForm = ({
           id="jobTitle"
           placeholder="Job title"
           value={formData.jobTitle}
+          error={errors.jobTitle}
           onChange={onInputChange}
-          onBlur={onTitleBlur}
+          onBlur={() => {
+            onInputBlur('jobTitle')
+            onTitleBlur()
+          }}
         />
         <Input
           label="Company"
@@ -59,8 +71,12 @@ export const GeneratorForm = ({
           id="company"
           placeholder="Company"
           value={formData.company}
+          error={errors.company}
           onChange={onInputChange}
-          onBlur={onTitleBlur}
+          onBlur={() => {
+            onInputBlur('company')
+            onTitleBlur()
+          }}
         />
       </div>
 
@@ -70,7 +86,9 @@ export const GeneratorForm = ({
         id="skills"
         placeholder="HTML, CSS and doing things in time"
         value={formData.skills}
+        error={errors.skills}
         onChange={onInputChange}
+        onBlur={() => onInputBlur('skills')}
         fullWidth
       />
 
@@ -81,7 +99,12 @@ export const GeneratorForm = ({
           {loading ? <Loader /> : 'Generate New'}
         </Button>
       ) : (
-        <Button type="submit" variant={loading ? 'generate' : 'generate-try-again'} fullWidth>
+        <Button
+          type="submit"
+          variant={loading ? 'generate' : 'generate-try-again'}
+          disabled={!isFormValid}
+          fullWidth
+        >
           {loading ? (
             <Loader />
           ) : (

@@ -19,10 +19,14 @@ export const Generators = () => {
     skills: '',
     details: '',
   })
+  const [touchedFields, setTouchedFields] = useState({
+    jobTitle: false,
+    company: false,
+    skills: false,
+  })
   const [generatedText, setGeneratedText] = useState('')
   const { isCopied, copy } = useCopyToClipboard()
   const [title, setTitle] = useState('New Applications')
-
   const [loading, setLoading] = useState(false)
   const resetTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
@@ -64,6 +68,13 @@ export const Generators = () => {
     }))
   }
 
+  const handleInputBlur = (name: 'jobTitle' | 'company' | 'skills') => {
+    setTouchedFields((prevState) => ({
+      ...prevState,
+      [name]: true,
+    }))
+  }
+
   const handleSubmit = async (e: SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (loading) return
@@ -82,6 +93,7 @@ export const Generators = () => {
     resetTimerRef.current = setTimeout(() => {
       setLoading(false)
       setFormData({ jobTitle: '', company: '', skills: '', details: '' })
+      setTouchedFields({ jobTitle: false, company: false, skills: false })
     }, 3000)
   }
 
@@ -97,7 +109,13 @@ export const Generators = () => {
             onSubmit={handleSubmit}
             canGenerateMore={state.length < 5}
             onTitleBlur={handleTitleBlur}
+            onInputBlur={handleInputBlur}
             loading={loading}
+            errors={{
+              jobTitle: touchedFields.jobTitle && !formData.jobTitle.trim() ? 'Required field' : '',
+              company: touchedFields.company && !formData.company.trim() ? 'Required field' : '',
+              skills: touchedFields.skills && !formData.skills.trim() ? 'Required field' : '',
+            }}
           />
           <GeneratedPreview
             loading={loading}

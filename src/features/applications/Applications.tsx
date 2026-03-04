@@ -16,7 +16,7 @@ export const Applications = () => {
   return (
     <Container>
       <div className={s.wrapper}>
-        <section className={s.section}>
+        <div className={s.section}>
           <h1 className={s.applications}>Applications</h1>
           <Button
             className={s.sectionButton}
@@ -26,7 +26,7 @@ export const Applications = () => {
           >
             <Plus /> <span className={s.buttonText}>Create New</span>
           </Button>
-        </section>
+        </div>
         {state.length > 0 && (
           <ul className={s.letterWrapper}>
             {state.map((item) => (

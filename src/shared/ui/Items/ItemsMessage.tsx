@@ -11,7 +11,7 @@ export const ItemsMessage = ({ item }: ItemsProps) => {
     <li key={item.id} className={s.letter}>
       <div className={s.textWrapper}>
         <p className={s.text}>{item.text}</p>
-        <div className={s.overlay}></div>
+        {/*<div className={s.overlay}></div>*/}
       </div>
       <div className={s.wrapperButton}>
         <DeleteMessageButton id={item.id} />

@@ -40,8 +40,9 @@ export const GeneratorForm = ({
 
   return (
     <form className={s.form} onSubmit={onSubmit}>
-      <h2 className={clsx(s.head, title !== 'New Applications' && s.headModified)}>{title}</h2>
-
+      <div className={s.headWrapper}>
+        <h2 className={clsx(s.head, title !== 'New Applications' && s.headModified)}>{title}</h2>
+      </div>
       <div className={s.inputJobCompany}>
         <Input
           label="Job title"

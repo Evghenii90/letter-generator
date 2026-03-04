@@ -6,6 +6,11 @@
   width: 100%;
   max-width: 544px;
 }
+.headWrapper {
+  width: 100%;
+  border-bottom: 1px solid #eaecf0;
+  padding-bottom: 14px;
+}
 
 .head {
   font-weight: 600;
@@ -13,18 +18,16 @@
   line-height: 122%;
   letter-spacing: -0.02em;
   color: #667085;
-  border-bottom: 1px solid #eaecf0;
-
+  margin: 0;
   text-align: start;
-  padding-bottom: 14px;
 }
 
-.headModified{
+.headModified {
+  color: #101828;
   font-weight: 600;
   font-size: 36px;
   line-height: 122%;
   letter-spacing: -0.02em;
-  color: #101828;
 }
 
 .inputJobCompany {

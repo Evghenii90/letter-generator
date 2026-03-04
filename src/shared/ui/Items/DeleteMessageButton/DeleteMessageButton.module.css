@@ -1,0 +1,17 @@
+.btn {
+  display: flex;
+  align-items: normal;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: #475467;
+  width: 77px;
+}
+
+@media (max-width: 768px) {
+
+}
+
+

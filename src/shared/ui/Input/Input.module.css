@@ -1,0 +1,48 @@
+.inputWrapper {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  box-sizing: border-box;
+  flex: 1 1 0;
+  min-width: 44%;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  color: #344054;
+  text-align: left;
+}
+
+.labelDisabled {
+  color: #999;
+}
+
+.input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #101828;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  padding: 8px 12px;
+  outline: none;
+  transition: border-color 0.2s;
+
+}
+
+.sizeSmall {
+  /*width: 100%;*/
+  /*max-width: 264px;*/
+  /*height: 40px;*/
+}
+
+.sizeMedium {
+  /*width: 544px;*/
+  height: 40px;
+}
+
+.fullWidth {
+  width: 100%;
+}

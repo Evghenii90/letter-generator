@@ -4,13 +4,11 @@
   background: #087443;
   cursor: pointer;
   white-space: nowrap;
-
-  display: inline-flex; /* flex для иконок + текста */
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Размеры и паддинги */
 .create-primary {
   width: 190px;
   height: 60px;

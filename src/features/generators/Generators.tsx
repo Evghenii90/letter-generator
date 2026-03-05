@@ -109,14 +109,16 @@ export const Generators = () => {
       })
 
       setTitle('New Applications')
+
       if (resetTimerRef.current) {
         clearTimeout(resetTimerRef.current)
       }
+
       resetTimerRef.current = setTimeout(() => {
         setLoading(false)
         setFormData({ jobTitle: '', company: '', skills: '', details: '' })
         setTouchedFields({ jobTitle: false, company: false, skills: false })
-      }, 3000)
+      }, 2500)
     } catch {
       setGeneratedText('Failed to generate letter. Try again.')
       setLoading(false)

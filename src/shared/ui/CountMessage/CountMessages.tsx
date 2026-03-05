@@ -12,7 +12,9 @@ export const CountMessages = ({ type }: CountMessagesProps) => {
     <>
       {state && state.length >= maxCountMessages && (
         <>
-          <span className={s.status}>{state.length}/5 applications generated</span>
+          <span className={s.status}>
+            {state.length}/5 <span className={s.textStatus}>applications generated</span>
+          </span>
           <div className={s.backgroundSuccess}>
             <Succes className={s.successIcon} />
           </div>

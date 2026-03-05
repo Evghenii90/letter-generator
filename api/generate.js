@@ -30,8 +30,6 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Missing required fields' })
     }
 
-    await new Promise((resolve) => setTimeout(resolve, 1200))
-
     const text = generateMockCoverLetter({
       jobTitle,
       company,

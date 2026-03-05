@@ -81,6 +81,7 @@ export const GeneratorForm = ({
       </div>
 
       <Input
+        className={s.skills}
         label="I am good at..."
         name="skills"
         id="skills"

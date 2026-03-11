@@ -1,0 +1,93 @@
+.letter {
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 12px;
+  padding: 24px;
+  height: 240px;
+  background: var(--light-300);
+  position: relative;
+  overflow: hidden;
+}
+
+.letterExpanded {
+  height: auto;
+  overflow: visible;
+}
+
+.textWrapper {
+  height: 160px;
+}
+
+.textWrapperExpanded {
+  height: auto;
+}
+
+.text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--gray-700);
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: start;
+  white-space: pre-wrap;
+  word-break: break-word;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  padding-bottom: 62px;
+}
+
+.textExpanded {
+  display: block;
+  overflow: visible;
+  text-overflow: clip;
+  -webkit-line-clamp: unset;
+}
+
+.wrapperButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  box-shadow: 0 -15px 40px 0 #f1f3f6;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--light-300);
+  height: 70px;
+  padding: 20px 20px 25px;
+}
+
+@media (max-width: 1024px) {
+  .letter {
+    width: 100%;
+    height: auto;
+    padding: 16px;
+  }
+  .text {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .letter {
+    width: 100%;
+    height: auto;
+    padding: 16px;
+  }
+  .text {
+    height: auto;
+  }
+  .wrapperButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    height: auto;
+  }
+}

@@ -1,0 +1,88 @@
+.status {
+  font-weight: 400;
+  font-size: var(--font-size-l);
+  line-height: 156%;
+  text-align: center;
+  color: var(--gray-500);
+}
+
+.backgroundSuccess {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--mint-300);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.successIcon {
+  position: absolute;
+  z-index: 9999999999;
+}
+
+.dotsBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding-bottom: 8px;
+}
+
+.dotBanner {
+  width: 32px;
+  height: 8px;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+  background: var(--dark-700);
+  opacity: 0.24;
+}
+
+.dotsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.dotHeader {
+  width: 8px;
+  height: 8px;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+  background: var(--dark-700);
+  opacity: 0.24;
+}
+
+.dotBannerFill {
+  width: 32px;
+  height: 8px;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+  background: var(--dark-700);
+}
+
+.dotHeaderFill {
+  width: 8px;
+  height: 8px;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+  background: var(--dark-700);
+}
+
+@media (max-width: 768px) {
+  .status {
+    font-weight: 400;
+    font-size: var(--font-size-s);
+    line-height: 156%;
+    text-align: center;
+    color: var(--gray-500);
+  }
+}
+
+@media (max-width: 520px) {
+  .textStatus {
+    display: none;
+  }
+}

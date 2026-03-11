@@ -1,0 +1,50 @@
+@use 'normalize.css';
+@use './shared/styles/reset';
+@use './shared/styles/typography';
+@use './shared/styles/fonts';
+@use './shared/styles/colors';
+
+body {
+  color: var(--light-100);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--light-100);
+}
+
+html,
+body {
+  font-family: var(--font-family), sans-serif;
+  overflow-x: hidden;
+}
+
+#root {
+  margin: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--second-family), sans-serif;
+}
+
+//[data-overlayscrollbars-field] {
+//  appearance: none;
+//  display: block;
+//  border: none;
+//  padding: 0;
+//  margin: 0;
+//  min-width: 100%;
+//  min-height: 100%;
+//  overflow: hidden;
+//  field-sizing: content;
+//}
+//
+//[data-overlayscrollbars-viewport] > [data-overlayscrollbars-field] {
+//  position: absolute;
+//  padding: 12px 14px;
+//  top: 0;
+//  left: 0;
+//}

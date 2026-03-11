@@ -1,0 +1,24 @@
+.copyBtn {
+  bottom: 26px;
+  right: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  font-weight: 600;
+  font-size: var(--font-size-m);
+  line-height: 150%;
+  color: var(--gray-700);
+  cursor: pointer;
+  width: 162px;
+  border: none;
+}
+
+.copyBtn svg {
+  cursor: pointer;
+}
+
+.copyBtn:focus-visible {
+  outline: 1px solid #9f9b9b;
+  border-radius: 5px;
+}

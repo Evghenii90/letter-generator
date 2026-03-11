@@ -1,5 +1,6 @@
 import react from '@vitejs/plugin-react-swc'
 import type { IncomingMessage, ServerResponse } from 'node:http'
+import * as path from 'node:path'
 import { defineConfig } from 'vite'
 import svgr from 'vite-plugin-svgr'
 
@@ -93,6 +94,11 @@ function installLocalApi(middlewares: {
 
 // https://vite.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
   plugins: [
     react(),
     svgr(),

@@ -1,0 +1,88 @@
+.button {
+  border-radius: 6px;
+  border: 1px solid var(--green-500);
+  background: var(--green-500);
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-100);
+}
+
+.button:focus-visible {
+  outline: 4px solid var(--mint-500);
+}
+
+.button:active {
+  background-color: var(--mint-500);
+  border: none;
+}
+
+.button:disabled {
+  background: var(--gray-100);
+  border: 1px solid var(--gray-100);
+  color: var(--gray-300);
+  cursor: not-allowed;
+}
+
+.primary {
+  width: 190px;
+  height: 60px;
+  padding: 10px 18px;
+  font-size: var(--font-size-l);
+  gap: 12px;
+}
+
+.secondary {
+  width: 151px;
+  height: 44px;
+  padding: 10px 18px;
+  font-size: var(--font-size-m);
+  gap: 8px;
+}
+
+.outline {
+  background: var(--light-100);
+  border: 1px solid var(--gray-100);
+  color: var(--gray-900);
+  text-align: center;
+  gap: 12px;
+}
+
+.outline:disabled {
+  cursor: not-allowed;
+  background: var(--light-100);
+  color: var(--gray-900);
+}
+
+.outline:active {
+  background-color: var(--gray-300);
+}
+
+.outline:focus-visible {
+  outline: 2px solid var(--gray-300);
+}
+
+.fullWidth {
+  box-sizing: border-box;
+  width: 100%;
+  height: 60px;
+  padding: 16px 28px;
+  font-size: var(--font-size-l);
+}
+
+@media (max-width: 768px) {
+  .primary,
+  .secondary {
+    width: 100%;
+    height: 50px;
+    font-size: var(--font-size-m);
+    gap: 8px;
+  }
+
+  .fullWidth {
+    height: 50px;
+    font-size: var(--font-size-m);
+  }
+}

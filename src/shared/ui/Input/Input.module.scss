@@ -1,0 +1,64 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-sizing: border-box;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.label {
+  font-weight: 500;
+  font-size: var(--font-size-s);
+  line-height: 143%;
+  color: var(--gray-900);
+  padding-top: 6px;
+}
+
+.input {
+  font-weight: 400;
+  font-size: var(--font-size-m);
+  line-height: 150%;
+  color: var(--dark-700);
+  background-color: var(--light-100);
+  border: 1px solid var(--gray-100);
+  border-radius: 6px;
+  padding: 8px 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  border: 1px solid var(--mint-500);
+  border-radius: 8px;
+  box-shadow:
+    0 0 0 4px var(--green-200),
+    0 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+.inputError {
+  border: 1px solid var(--warning-100);
+  box-shadow:
+    0 0 0 4px var(--warning-200),
+    0 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover {
+  -webkit-text-fill-color: var(--dark-700);
+  box-shadow: 0 0 0 1000px var(--light-100) inset;
+}
+
+.input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--dark-700);
+  box-shadow:
+    0 0 0 1000px var(--light-100) inset,
+    0 0 0 4px var(--green-200);
+}
+
+.errorText {
+  font-size: var(--font-size-s);
+  color: var(--warning-100);
+}

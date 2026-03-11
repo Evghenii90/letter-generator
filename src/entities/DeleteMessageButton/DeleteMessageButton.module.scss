@@ -1,0 +1,28 @@
+.btn {
+  display: flex;
+  align-items: normal;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: var(--font-size-m);
+  line-height: 150%;
+  width: 77px;
+  border: none;
+}
+
+.btn:focus-visible {
+  outline: 1px solid #9f9b9b;
+  border-radius: 5px;
+}
+
+.btn:active .textBtn {
+  color: var(--error-500, #f04438);
+}
+
+.btn:active svg path {
+  stroke: var(--error-500, #f04438);
+}
+
+.textBtn {
+  color: var(--gray-700);
+}

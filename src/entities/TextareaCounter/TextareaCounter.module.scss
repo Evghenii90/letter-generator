@@ -1,0 +1,19 @@
+.counter {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: var(--font-size-s);
+  line-height: 143%;
+  color: var(--gray-700);
+  padding-top: 6px;
+  padding-bottom: 18px;
+  min-width: 100%;
+}
+
+.textError {
+  color: var(--warning-300);
+}
+
+.counterError {
+  color: var(--warning-300);
+}

@@ -1,62 +1,33 @@
-import { forwardRef } from 'react'
+import { type ComponentPropsWithRef, useId } from 'react'
 
 import { clsx } from 'clsx'
 
-import s from './Input.module.css'
-import type { InputProps } from './type'
+import styles from './Input.module.scss'
 
-export const Input = forwardRef<HTMLInputElement, InputProps>(
-  (
-    {
-      placeholder,
-      id,
-      label,
-      error,
-      isDisabled,
-      value,
-      onChange,
-      onBlur,
-      name,
-      className,
-      type = 'text',
-      size = 'small',
-      fullWidth = false,
-    },
-    ref,
-  ) => {
-    const sizeClassMap = {
-      small: s.sizeSmall,
-      medium: s.sizeMedium,
-      large: s.sizeLarge,
-    } as const
+type InputProps = {
+  label?: string
+  error?: string
+  fullWidth?: boolean
+  className?: string
+} & ComponentPropsWithRef<'input'>
 
-    const sizeClass = sizeClassMap[size]
+export const Input = ({ label, error, fullWidth, className, ...rest }: InputProps) => {
+  const textareaId = useId()
 
-    const inputClassName = clsx(s.input, sizeClass, error && s.inputError, className)
-    const labelClassName = clsx(s.label, isDisabled && s.labelDisabled)
-
-    return (
-      <div className={clsx(s.inputWrapper, fullWidth && s.fullWidth)}>
-        {label && (
-          <label htmlFor={id} className={labelClassName}>
-            {label}
-          </label>
-        )}
-        <input
-          id={id}
-          type={type}
-          placeholder={placeholder}
-          className={inputClassName}
-          disabled={isDisabled}
-          ref={ref}
-          value={value}
-          onChange={onChange}
-          onBlur={onBlur}
-          name={name}
-        />
-      </div>
-    )
-  },
-)
+  return (
+    <div className={clsx(styles.wrapper, fullWidth && styles.fullWidth)}>
+      {label && (
+        <label className={styles.label} htmlFor={textareaId}>
+          {label}
+        </label>
+      )}
+      <input
+        id={textareaId}
+        className={clsx(styles.input, error && styles.inputError, className)}
+        {...rest}
+      />
+    </div>
+  )
+}
 
 Input.displayName = 'Input'

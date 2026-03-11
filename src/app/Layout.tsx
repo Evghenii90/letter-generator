@@ -1,12 +1,14 @@
 import { Outlet } from 'react-router-dom'
 
-import { Header } from '../shared/ui/Header/Header'
+import { Header } from '@/widgets/Header/Header'
+
+import styles from './Layout.module.scss'
 
 export const Layout = () => {
   return (
     <>
       <Header />
-      <main style={{ flex: '1' }}>
+      <main className={styles.main}>
         <Outlet />
       </main>
     </>

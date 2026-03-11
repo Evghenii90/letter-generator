@@ -1,0 +1,96 @@
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  max-width: 1120px;
+  height: 76px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.sectionButton {
+  transform: translateY(-6px);
+}
+
+.applications {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 125%;
+  letter-spacing: -0.02em;
+  color: var(--dark-700);
+  padding: 16px 0;
+}
+
+.buttonText {
+  font-weight: 600;
+  font-size: var(--font-size-m);
+  line-height: 150%;
+  color: var(--light-100);
+  transform: translateY(2px);
+}
+
+.letterWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 16px;
+}
+
+@media (max-width: 1024px) {
+  .letterWrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .applications {
+    font-size: 36px;
+  }
+  .wrapper {
+    padding: 0 0 24px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .letterWrapper {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .applications {
+    font-size: 32px;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  .section {
+    height: auto;
+    align-items: flex-start;
+    padding: 0;
+    flex-wrap: nowrap;
+  }
+  .wrapper {
+    padding: 16px 0;
+  }
+  .sectionButton {
+    width: 151px;
+    height: 44px;
+    justify-content: center;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .applications {
+    font-size: 28px;
+  }
+  .wrapper {
+    padding: 12px 0;
+  }
+  .letterWrapper {
+    gap: 8px;
+  }
+  button {
+    font-size: var(--font-size-s);
+    padding: 10px 16px;
+  }
+}

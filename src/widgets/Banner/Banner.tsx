@@ -1,10 +1,8 @@
 import { useNavigate } from 'react-router-dom'
-
 import { CountMessages } from '@/entities/CountMessage'
 import Plus from '@/shared/assets/icons/plus.svg?react'
 import { ROUTES_PATHS } from '@/shared/routes'
 import { Button } from '@/shared/ui/Button'
-
 import styles from './Banner.module.scss'
 
 type BannerProps = {

@@ -1,12 +1,10 @@
 import { useNavigate } from 'react-router-dom'
-
 import { CountMessages } from '@/entities/CountMessage'
 import AltShift from '@/shared/assets/icons/altshift.svg?react'
 import Home from '@/shared/assets/icons/home.svg?react'
 import Logo from '@/shared/assets/icons/logo.svg?react'
 import { ROUTES_PATHS } from '@/shared/routes'
 import { Container } from '@/shared/ui/Container'
-
 import styles from './Header.module.scss'
 
 export const Header = () => {

@@ -1,5 +1,4 @@
 import Copy from '@/shared/assets/icons/copy.svg?react'
-
 import styles from './CopyButton.module.scss'
 
 type Props = {

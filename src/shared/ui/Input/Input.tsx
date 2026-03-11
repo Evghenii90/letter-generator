@@ -1,7 +1,5 @@
 import { type ComponentPropsWithRef, useId } from 'react'
-
 import { clsx } from 'clsx'
-
 import styles from './Input.module.scss'
 
 type InputProps = {

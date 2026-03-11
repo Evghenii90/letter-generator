@@ -1,9 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-
 import { Applications } from '@/features/applications/Applications.tsx'
 import { Generators } from '@/features/generators/ui/Generators.tsx'
 import { ROUTES_PATHS } from '@/shared/routes'
-
 import './App.css'
 import { Layout } from './Layout'
 

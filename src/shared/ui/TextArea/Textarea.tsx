@@ -1,9 +1,6 @@
 import { type ComponentPropsWithRef, type KeyboardEvent, useId } from 'react'
-
 import { clsx } from 'clsx'
-
 import { MAX_LENGTH_TEXT_AREA } from '@/shared/constants'
-
 import styles from './Textarea.module.scss'
 
 export type TextareaProps = {

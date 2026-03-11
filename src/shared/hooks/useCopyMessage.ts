@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-
 import copyToClipboard from 'copy-to-clipboard'
 
 export function useCopyToClipboard(timeout = 2000) {

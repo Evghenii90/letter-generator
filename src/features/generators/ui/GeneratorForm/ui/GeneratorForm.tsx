@@ -1,10 +1,7 @@
 import { useEffect } from 'react'
-
 import { Controller, useForm } from 'react-hook-form'
-
 import { zodResolver } from '@hookform/resolvers/zod'
 import { clsx } from 'clsx'
-
 import { TextareaCounter } from '@/entities/TextareaCounter/TextareaCounter.tsx'
 import { type FormState } from '@/features/generators/model/type.ts'
 import { generatorFormSchema } from '@/features/generators/ui/GeneratorForm/model/shemas/generatorFormSchema.ts'
@@ -21,7 +18,6 @@ import { MAX_LENGTH_TEXT_AREA } from '@/shared/constants'
 import { Button } from '@/shared/ui/Button/Button.tsx'
 import { Input } from '@/shared/ui/Input/Input.tsx'
 import { Textarea } from '@/shared/ui/TextArea/Textarea.tsx'
-
 import styles from './GeneratorForm.module.scss'
 
 type GeneratorFormProperties = {
@@ -64,8 +60,7 @@ export const GeneratorForm = ({ onSubmit, onTitleBlur }: GeneratorFormProperties
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)} key={formKey}>
       <div className={styles.headWrapper}>
         <h2 className={clsx(styles.head, title !== 'New Applications' && styles.headModified)}>
-          {' '}
-          {title}{' '}
+          {title}
         </h2>
       </div>
       <div className={styles.inputJobCompany}>

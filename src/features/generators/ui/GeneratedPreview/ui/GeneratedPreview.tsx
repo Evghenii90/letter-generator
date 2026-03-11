@@ -6,7 +6,6 @@ import {
 import { useStore } from '@/features/generators/ui/GeneratorForm/model/store/useStore.ts'
 import LoadCircle from '@/shared/assets/icons/loadCircle.svg?react'
 import { useCopyToClipboard } from '@/shared/hooks/useCopyMessage.ts'
-
 import styles from './GeneratedPreview.module.scss'
 
 export const GeneratedPreview = () => {

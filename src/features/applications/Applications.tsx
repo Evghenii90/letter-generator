@@ -1,7 +1,5 @@
 import { useState } from 'react'
-
 import { useNavigate } from 'react-router-dom'
-
 import { ItemsMessage } from '@/entities/Items'
 import { selectMessages, useStore } from '@/features/generators/ui/GeneratorForm/model/store'
 import Plus from '@/shared/assets/icons/plus.svg?react'
@@ -10,7 +8,6 @@ import { ROUTES_PATHS } from '@/shared/routes'
 import { Button } from '@/shared/ui/Button/Button.tsx'
 import { Container } from '@/shared/ui/Container/Container.tsx'
 import { Banner } from '@/widgets/Banner'
-
 import styles from './Applications.module.scss'
 
 export const Applications = () => {

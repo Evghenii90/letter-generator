@@ -1,5 +1,4 @@
 import { clsx } from 'clsx'
-
 import styles from './TextareaCounter.module.scss'
 
 type TextareaCounterProps = {

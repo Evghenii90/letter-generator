@@ -1,8 +1,6 @@
 import { create } from 'zustand'
 import { createJSONStorage, persist } from 'zustand/middleware'
-
 import { DEFAULT_GENERATOR_TITLE } from '@/shared/constants'
-
 import { type MessageItem } from './types.ts'
 
 export type StoreState = {

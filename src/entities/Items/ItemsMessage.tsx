@@ -1,10 +1,8 @@
 import { clsx } from 'clsx'
-
 import { CopyButton } from '@/entities/CopyButton'
 import { DeleteMessageButton } from '@/entities/DeleteMessageButton'
 import type { MessageItem } from '@/features/generators/ui/GeneratorForm/model/store/types.ts'
 import { useCopyToClipboard } from '@/shared/hooks/useCopyMessage.ts'
-
 import styles from './ItemsMessage.module.scss'
 
 export type ItemsProps = {

@@ -1,7 +1,5 @@
 import { useCallback, useEffect, useRef } from 'react'
-
 import { useLocation, useNavigate } from 'react-router-dom'
-
 import { GeneratedPreview } from '@/features/generators/ui/GeneratedPreview/ui'
 import {
   selectCompleteGeneration,
@@ -20,7 +18,6 @@ import { GeneratorForm } from '@/features/generators/ui/GeneratorForm/ui'
 import { DEFAULT_GENERATOR_TITLE, MAX_COUNT_MESSAGES } from '@/shared/constants'
 import { Container } from '@/shared/ui/Container/Container.tsx'
 import { Banner } from '@/widgets/Banner/Banner.tsx'
-
 import { type FormState } from '../model/type.ts'
 import styles from './Generators.module.scss'
 

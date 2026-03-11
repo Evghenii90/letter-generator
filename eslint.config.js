@@ -23,18 +23,11 @@ export default [
     rules: {
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': 'warn',
-      'prettier/prettier': [
+      'padding-line-between-statements': [
         'error',
-        {
-          semi: false,
-          singleQuote: true,
-          tabWidth: 2,
-          printWidth: 120,
-          bracketSpacing: true,
-          arrowParens: 'always',
-          endOfLine: 'lf',
-        },
+        { blankLine: 'never', prev: 'import', next: 'import' },
       ],
+      'prettier/prettier': 'error',
     },
     settings: {
       react: {

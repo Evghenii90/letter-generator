@@ -7,7 +7,7 @@
   "endOfLine": "lf",
   "bracketSpacing": true,
   "importOrder": ["^react$", "^@?react.*$", "^@?\\w", "^@/(.*)$", "^[./]"],
-  "importOrderSeparation": true,
+  "importOrderSeparation": false,
   "importOrderSortSpecifiers": true,
   "plugins": ["@trivago/prettier-plugin-sort-imports"]
 }

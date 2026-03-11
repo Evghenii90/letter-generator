@@ -5,7 +5,6 @@ import {
 import { useStore } from '@/features/generators/ui/GeneratorForm/model/store/useStore.ts'
 import Success from '@/shared/assets/icons/succes.svg?react'
 import { MAX_COUNT_MESSAGES } from '@/shared/constants'
-
 import styles from './CountMessages.module.scss'
 
 export type CountMessagesProps = { type: 'header' | 'banner' }

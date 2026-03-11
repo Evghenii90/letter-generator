@@ -1,7 +1,5 @@
 import type { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react'
-
 import { clsx } from 'clsx'
-
 import s from './Button.module.scss'
 
 export type ButtonVariant = 'primary' | 'secondary' | 'outline'
